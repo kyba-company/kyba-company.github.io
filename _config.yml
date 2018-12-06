@@ -1,3 +1,25 @@
+name: Kyba
+
+description: Kyba building company
+
 sass:
   sass_dir: _sass
   style: compressed
+
+permalink: /:title/
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
+gems:
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
