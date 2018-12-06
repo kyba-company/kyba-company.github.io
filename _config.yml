@@ -16,6 +16,7 @@ kramdown:
 sass:
   style: :compressed
 
+#plugins
 gems:
   - jekyll-sitemap
 
@@ -25,3 +26,7 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+  - node_modules
+  - package.json
+  - package-lock.json
+  - gulpfile.js
