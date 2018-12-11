@@ -1,23 +1,30 @@
 ---
 layout: default
+title: Строительные работы
+description: Строительные услуги мы предлагаем нашим клиентам
+heading: Строительные, бетонные работы. Опалубка
 ---
 
-<div class="posts">
-<form action="https://formspree.io/xeyka75@gmail.com" method="POST">
-  <input type="text" name="name">
-  <input type="email" name="_replyto">
-  <input type="submit" value="Send">
-</form>
-  {% for post in site.posts %}
-    <article class="post">
+<script>
+  var _isS = !1, _cB = function() {
+    console.log('sumbmitted');
+  }
+</script>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+<div class="cont">
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
+  <iframe name="feefix" style="display:none" id="feefix" onload="_isS && _cB();"></iframe>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+  <form id="feedback" 
+    action="https://docs.google.com/forms/d/e/1FAIpQLSenV1Qc7FeuMM6SVWtY_hSaKIMjekfwZLyQI8o7X4gnDier1w/formResponse" 
+    method="POST" target="feefix" onsubmit="_isS = !0;">
+    <input type="text" name="entry.2005620554" placeholder="Имя">
+    <input type="email" name="entry.1045781291" placeholder="E-mail">
+    <input type="text" name="entry.1166974658" placeholder="Телефон">
+    <textarea name="entry.839337160" placeholder="Комментарий"></textarea>
+    <button type="submit">Отправить</button>
+  </form>
+
+  <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSenV1Qc7FeuMM6SVWtY_hSaKIMjekfwZLyQI8o7X4gnDier1w/viewform?embedded=true" width="100%" height="600px" frameborder="0" marginheight="0" marginwidth="0">Загрузка...</iframe> -->
+
 </div>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>{{ site.name }} - {{ page.title }}</title>
+		<meta name="description" content="{{ page.description }}">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta property="og:image" content="{{ site.baseurl }}/{{ site.avatar }}">
+		<meta name="theme-color" content="#000">
+		<link rel="icon" href="/assets/img/favicon.ico">
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-icon-180x180.png">
+		<link rel="stylesheet" href="/assets/css/main.css">
+	</head>
+
+	<body class="is-home">
+
+		<header id="header">
+			<div class="cont">
+				<a href="/" class="logo"><span>{{ site.name }}</span></a>
+				<div class="tel">
+					<span class="i-contact"></span>
+					<div class="phone"><a href="tel:{{ site.phone.clean }}">{{ site.phone.number }}</div>
+					<div class="email"><a href="mailto:{{ site.email }}">{{ site.email }}</a></div>
+				</div>
+			</div>
+
+			<div class="cont">
+				<div class="top">
+					<h1>{{ page.heading }}</h1>
+					
+				</div>
+			</div>
+		</header>
+
+
