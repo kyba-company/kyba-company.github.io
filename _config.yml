@@ -10,9 +10,9 @@ phone:
   number: +38 (096) 258-39-52
   clean: 0962583952
 
-url:
+url: https://kyba.company
 
-baseurl: https://kyba.company
+baseurl: ""
 
 permalink: /:title/
 
