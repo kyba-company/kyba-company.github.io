@@ -6,10 +6,16 @@
 		<meta name="description" content="{{ page.description }}">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta property="og:title" content="{{ page.title }}">
 		<meta property="og:image" content="{{ site.url }}/{{ site.avatar }}">
+		{% if page.excerpt %}
+    	<meta property="og:description" content="{{ page.excerpt| strip_html }}" />
+    	{% else %}
+    	<meta property="og:description" content="{{ site.description }}" />
+    	{% endif %}
 		<meta name="theme-color" content="#000">
 		<link rel="icon" href="/assets/img/favicon.ico">
-		<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-icon-180x180.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 		<link rel="stylesheet" href="/assets/css/main.css">
 	</head>
 
@@ -17,7 +23,7 @@
 
 		<header id="header">
 			<div class="cont">
-				<a href="/" class="logo"><span>{{ site.name }}</span></a>
+				<a href="/" class="logo"><span>{{ site.domain | capitalize }}</span></a>
 				<div class="tel">
 					<span class="i-contact"></span>
 					<div class="phone"><a href="tel:{{ site.phone.clean }}">{{ site.phone.number }}</div>

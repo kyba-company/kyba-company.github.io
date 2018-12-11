@@ -1,9 +1,11 @@
 
     <footer>
       <div class="cont">
-        <p class="copy">&copy; Kyba.company 2018</p>
-        <p class="info">Site is a simple <a href="https://developers.google.com/web/progressive-web-apps/" rel="nofollow">Progressive Web App</a>.</p>
-        <a class="cybertool" href="//www.cybertool.site/" target="_blank">production by <img src="" alt="CYBERtool"></a>
+        <p class="copy">&copy; {{ site.domain | capitalize }} {{ "now" | date: "%Y" }}</p>
+        {% comment %}
+        <!-- <p class="info">Site is a simple <a href="https://developers.google.com/web/progressive-web-apps/" rel="nofollow">Progressive Web App</a>.</p> 
+        <a class="cybertool" href="//www.cybertool.site/" target="_blank">production by <img src="" alt="CYBERtool"></a>  -->
+        {% endcomment %}
       </div>
     </footer>
 
