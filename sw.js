@@ -25,39 +25,23 @@ workbox.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "assets/css/main.css",
-<<<<<<< HEAD
-    "revision": "2"
+    "revision": "3"
   },
   {
     "url": "assets/img/gallery/5.jpg",
-    "revision": "2"
+    "revision": "3"
   },
   {
     "url": "assets/img/gallery/6.jpg",
-    "revision": "2"
+    "revision": "3"
   },
   {
     "url": "assets/js/bundle.js",
-    "revision": "2"
+    "revision": "3"
   },
   {
     "url": "index.html",
-    "revision": "2"
-  },
-  {
-    "url": "404.html",
-    "revision": "2"
-=======
-    "revision": "1"
-  },
-  {
-    "url": "index.html",
-    "revision": "1"
-  },
-  {
-    "url": "404.html",
-    "revision": "1"
->>>>>>> 01ec834cb14769f3ab99fb9b0d52fec013e526c8
+    "revision": "3"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
