@@ -1,51 +1,18 @@
 
     <footer>
-      <div class="cont" style="padding:20px;border-top:2px solid #ccc">
+      <div class="cont footer">
         <p class="copy">&copy; {{ site.domain | capitalize }} {{ "now" | date: "%Y" }}</p>
         {% comment %}
         <!-- <p class="info">Site is a simple <a href="https://developers.google.com/web/progressive-web-apps/" rel="nofollow">Progressive Web App</a>.</p> 
         <a class="cybertool" href="//www.cybertool.site/" target="_blank">production by <img src="" alt="CYBERtool"></a>  -->
         {% endcomment %}
-        {% comment %}
-        <script>
-          var _isS = !1, _cB = function() {
-            console.log('sumbmitted');
-          }
-        </script>
         
-        <iframe name="feefix" style="display:none" id="feefix" onload="_isS && _cB();"></iframe>
-
-        <form id="feedback" 
-          action="https://docs.google.com/forms/d/e/1FAIpQLSenV1Qc7FeuMM6SVWtY_hSaKIMjekfwZLyQI8o7X4gnDier1w/formResponse" 
-          method="POST" target="feefix" onsubmit="_isS = !0;">
-          <input type="text" name="entry.2005620554" placeholder="Имя">
-          <input type="email" name="entry.1045781291" placeholder="E-mail">
-          <input type="text" name="entry.1166974658" placeholder="Телефон">
-          <textarea name="entry.839337160" placeholder="Комментарий"></textarea>
-          <button type="submit">Отправить</button>
-        </form>
-        {% endcomment %}
-        {% comment %}
-          <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSenV1Qc7FeuMM6SVWtY_hSaKIMjekfwZLyQI8o7X4gnDier1w/viewform?embedded=true" width="100%" height="600px" frameborder="0" marginheight="0" marginwidth="0">Загрузка...</iframe> -->
-        {% endcomment %}
       </div>
     </footer>
 
     {% include svg.html %}
 
-    <script>
-      function registerServiceWorker() {
-        if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('service-worker.js', { scope: '/' }).then(() => {
-            console.log('Service Worker registered successfully.');
-          }).catch(error => {
-            console.log('Service Worker registration failed:', error);
-          });
-        }
-      }
-
-      {% comment %}registerServiceWorker();{% endcomment %}
-    </script> 
+    <script src="/assets/js/bundle.js"></script>
 
     <script>
     if ('serviceWorker' in navigator) {
@@ -60,6 +27,6 @@
       });
     }
     </script>
-
+    
   </body>
 </html>

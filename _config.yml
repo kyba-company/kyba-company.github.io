@@ -4,7 +4,9 @@ title: Kyba title
 
 description: Kyba company
 
-avatar: assets/img/kyba.company.png
+star: ★
+
+avatar: assets/icons/kyba.company.png
 
 email: igordoxnadze@gmail.com
 
@@ -36,6 +38,7 @@ sass:
 #plugins
 gems:
   - jekyll-sitemap
+  - jekyll-feed
 
 exclude:
   - Gemfile

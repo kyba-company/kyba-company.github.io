@@ -2,41 +2,76 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>{{ site.name }} - {{ page.title }}</title>
+		<title>&#9733; {{ site.name }} - {{ page.title }}</title>
 		<meta name="description" content="{{ page.description }}">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta property="og:title" content="{{ page.title }}">
 		<meta property="og:image" content="{{ site.url }}/{{ site.avatar }}">
 		{% if page.excerpt %}
-    	<meta property="og:description" content="{{ page.excerpt| strip_html }}" />
+    	<meta property="og:description" content="{{ page.excerpt| strip_html }}">
     	{% else %}
-    	<meta property="og:description" content="{{ site.description }}" />
+    	<meta property="og:description" content="{{ site.description }}">
     	{% endif %}
-		<meta name="theme-color" content="#000">
-		<link rel="icon" href="/assets/img/favicon.ico">
-		<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+		<meta name="theme-color" content="#1a1a1a">
+		<link rel="icon" href="/assets/icons/favicon.ico">
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+		<link rel="manifest" href="/manifest.json">
 		<link rel="stylesheet" href="/assets/css/main.css">
+		<script type="application/ld+json">
+		{
+		  "@context": "http://schema.org",
+		  "@type": "LocalBusiness",
+		  "priceRange": "от 5000 грн",
+		  "name": "{{ site.description }}",
+		  "image": "{{ site.url }}/{{ site.avatar }}",
+		  "telephone": "{{ site.phone.number }}",
+		  "email": "{{ site.email }}",
+		  "address": {
+		    "@type": "PostalAddress",
+		    "streetAddress": "Ул. Малиновского, 4",
+		    "addressLocality": "Харьков",
+		    "postalCode": "61064"
+		  },
+		  "url": "{{ site.url }}",
+		  "aggregateRating": {
+		    "@type": "AggregateRating",
+		    "ratingValue": "4.7",
+		    "bestRating": "5",
+		    "worstRating": "1",
+		    "ratingCount": "32"
+		  }
+		}
+		</script>
 	</head>
 
 	<body class="is-home">
 
 		<header id="header">
 			<div class="cont">
-				<a href="/" class="logo"><svg><use xlink:href="#i-logo"></use></svg></a>
+				<a href="/" class="logo" aria-label="{{ site.name }}"><svg><use xlink:href="#i-logo"></use></svg></a>
+				<nav>
+					<ul>
+						<li class="active"><a href="">Фотогалерея</a></li>
+						<li><a href="">Блог</a></li>
+						<li><a href="">Контакты</a></li>
+					</ul>
+				</nav>
 				<div class="tel">
-					<span class="i-contact"></span>
-					<div class="phone"><a href="tel:{{ site.phone.clean }}">{{ site.phone.number }}</div>
-					<div class="email"><a href="mailto:{{ site.email }}">{{ site.email }}</a></div>
-				</div>
-			</div>
-
-			<div class="cont">
-				<div class="top">
-					<h1>{{ page.heading }}</h1>
-					
+					<span class="i-contact"><svg><use xlink:href="#i-contact"></use></svg></span>
+					<div class="phone">
+						<a href="tel:{{ site.phone.clean }}">{{ site.phone.number }}
+							<span class="messengers">
+								<span class="viber"></span>
+								<span class="whatsup"></span>
+								<span class="telegram"></span>
+							</span>
+						</a>
+					</div>
+					<div class="email">
+						<a href="mailto:{{ site.email }}">{{ site.email }}</a>
+						<span class="clipboard"></span>
+					</div>
 				</div>
 			</div>
 		</header>
-
-

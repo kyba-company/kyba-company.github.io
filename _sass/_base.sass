@@ -1,0 +1,302 @@
+*
+	margin: 0
+	padding: 0
+	outline: none
+	box-sizing: border-box
+
+body
+	font-family: $font
+	color: $text
+	font-size: 16px
+	line-height: 1.4
+	display: grid
+	grid-template-columns: 1fr
+	grid-template-rows: auto 1fr auto
+	min-height: 100vh
+	-webkit-user-select: none
+	-ms-user-select: none
+	-moz-user-select: none
+
+::selection
+	background: $hover
+	color: #fff
+
+::-webkit-scrollbar
+	width: 5px
+	background-color: #f6f6f6
+
+::-webkit-scrollbar-thumb
+	background-color: $gray
+
+h1
+	font-weight: 400
+	font-size: $gutter
+	text-transform: uppercase
+	margin: 0 $gutter
+	line-height: 50px
+	width: 90%
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
+
+a
+	color: $blue
+	&:hover
+		color: $hover
+
+p
+	margin-bottom: 10px
+
+.cont
+	width: 80%
+	max-width: 1200px
+	margin: 0 auto
+
+.text
+	margin: $gutter
+	margin-right: 40px
+
+.text p
+	font-variant: small-caps
+	text-align: justify
+
+header
+	padding: 0
+
+header .cont
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.tel
+	text-align: right
+	margin-right: $gutter
+	position: relative
+
+.tel a
+	color: #333
+	text-decoration: none
+	display: block
+	position: relative
+	&:hover
+		color: $hover
+
+.phone a
+	font-size: 18px
+	color: #000
+	.messengers
+		display: none
+		position: absolute
+		z-index: 99
+		right: 0
+		top: 100%
+		span
+			display: block
+			float: right
+			width: 40px
+			height: 40px
+	&:hover .messengers
+		display: block
+
+.viber
+	background: #794D9C
+
+.whatsup
+	background: #59C965
+
+.telegram
+	background: #2EA2D4
+
+
+.clipboard
+	display: none
+	position: absolute
+	z-index: 99
+	right: 0
+	top: 0
+	width: 20px
+	height: 20px
+	background: red
+
+.email
+	position: relative
+	&:hover .clipboard
+		display: block
+
+.email a
+	color: $blue
+
+
+
+.i-contact
+	display: block
+	position: absolute
+	left: -50px
+	bottom: 4px
+	width: 36px
+	height: 36px
+	svg
+		position: absolute
+		top: 0
+		left: 0
+		width: 36px
+		height: 36px
+
+.logo
+	width: 120px
+	height: 50px
+	position: relative
+	display: inline-block
+	margin: 5px 10px
+	svg
+		position: absolute
+		top: 0
+		left: 0
+		width: 120px
+		height: 50px
+
+.top
+	background-color: $gray
+
+footer
+	margin-top: 40px
+
+.footer
+	padding: 20px
+	border-top: 2px solid $gray
+
+.copy
+	font-size: 14px
+	color: $text
+
+main .cont
+	display: grid
+	grid-template-columns: 1fr 300px
+
+nav ul
+	display: flex
+	list-style: none
+
+nav ul li
+	display: block
+	margin: 10px
+	&.active a
+		border-bottom: 2px solid $accent
+	&:hover a
+		border-bottom: 2px solid $gray
+
+
+nav ul li a
+	text-transform: uppercase
+	text-decoration: none
+	color: $text
+	font-size: 14px
+	font-weight: 600
+	border-bottom: 2px solid $alpha
+	padding-bottom: 2px
+
+aside
+	position: relative
+	iframe
+		display: none
+
+aside button
+	line-height: 50px
+	border: none
+	background-color: $accent
+	color: #fff
+	display: block
+	width: 100%
+	text-align: center
+	text-transform: uppercase
+	font-size: 18px
+	cursor: pointer
+	&:hover
+		background-color: $hover
+	
+.feedback
+	position: relative
+	overflow: hidden
+	display: block
+	background: rgba($text, 0.8)
+	height: 0px
+	max-height: 0px
+	transition: all .1s linear
+	&.active
+		height: auto
+		max-height: 1000px
+		padding: 10px 0 0
+		transition: all 1s ease-out
+	input, textarea
+		font-family: $font
+		font-size: 14px
+		display: block
+		width: 90%
+		padding: 8px
+		margin: 5px auto 15px auto
+		border: none
+		background: rgba($white, 0.1)
+		color: $white
+		&::placeholder
+			color: #aaa
+		&:focus
+			background: rgba($white, 0.7)
+			color: $text
+	p
+		color: $gray
+		text-align: center
+		font-size: 15px
+
+
+.btns
+	position: relative
+	button
+		display: block
+		float: left
+		width: 50%
+		font-size: 16px
+		background: $text
+		&:hover
+			background-color: $blue
+		&[type=submit]
+			background: #669E05
+			&:hover
+				background: #588805
+
+.widget
+	margin: 24px 0
+	h3
+		font-weight: 400
+		font-size: 18px
+		text-transform: uppercase
+		padding: 0 $gutter
+		margin-bottom: 10px
+		line-height: 40px
+		text-align: center
+		background: rgba($gray, 0.5)
+	ul
+		list-style: none
+		li
+			display: block
+			position: relative
+			margin-bottom: 5px
+			a
+				display: block
+				position: relative
+				overflow: hidden
+			img
+				width: 100%
+				height: 200px
+				object-fit: cover
+				padding: 5px
+				background: rgba($gray, 0.5)
+				transition: all .25s ease
+				&:hover
+					transform: scale(1.05)
+					filter: brightness(0.8)
+
+.more
+	display: block
+	text-align: center
+	margin: 10px 0
+	font-variant: small-caps

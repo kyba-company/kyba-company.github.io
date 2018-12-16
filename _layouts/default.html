@@ -5,7 +5,15 @@ layout: compress
 {% include header.html %}
 
 <main id="main" role="main" class="main">
-  {{ content }}
+	<div class="cont">
+		<section class="content">
+			<div class="top">
+				<h1>{{ page.heading }}</h1>
+			</div>
+  			<div class="text">{{ content }}</div>
+  		</section>
+  		{% include sidebar.html %}
+  	</div>
 </main>
 
 {% include footer.html %}
