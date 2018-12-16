@@ -25,15 +25,15 @@ workbox.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "assets/css/main.css",
-    "revision": "37f2ac6687cf86f12e01a0d35cd27603"
+    "revision": "1"
   },
   {
     "url": "index.html",
-    "revision": "d3a7d883ef20e70b1e6315792c4c4577"
+    "revision": "1"
   },
   {
     "url": "404.html",
-    "revision": "0ba499aa03f90028821303f58ff4105d"
+    "revision": "1"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
