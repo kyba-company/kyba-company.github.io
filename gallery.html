@@ -7,17 +7,13 @@ heading: Примеры наших строительных работ в Хар
 
 <link href="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css" rel="stylesheet">
 
-<ul id="lightgallery" class="list-unstyled row">
-    <li class="" data-src="/assets/img/gallery/1.jpg" data-sub-html="<h4>Фото 1</h4><p></p>" >
+<ul id="lightgallery" class="gallery_list">
+
+	{% for i in (1..27) %}
+    <li class="gallery_item" data-src="/assets/img/gallery/{{ i }}.jpg" data-sub-html="<h4>Фото {{ i }}</h4>" >
         <a href="#">
-            <img class="img-responsive" src="/assets/img/gallery/tmb/1.jpg" alt="">
+            <img class="img-responsive" src="/assets/img/gallery/tmb/{{ i }}.jpg" alt="Фото {{ i }}">
         </a>
     </li>
-
-    <li class="" data-src="/assets/img/gallery/2.jpg" data-sub-html="<h4>Фото 2</h4><p></p>" >
-        <a href="#">
-            <img class="img-responsive" src="/assets/img/gallery/tmb/2.jpg" alt="">
-        </a>
-    </li>
-
+	{% endfor %}
 </ul>
